@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		{% load staticfiles %}
+		<link type="text/css" rel="stylesheet" href="{% static '/static/style.css' %}"/>
+	</head>
+		<body>
+			<h1>Join Now</h1>
+			<form method='POST' action=''>{% csrf_token %}
+				{{form.as_p}}
+				<input type="submit">
+			</form>
+		</body>
+</html>
