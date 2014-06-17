@@ -8,26 +8,22 @@ from django.contrib.auth.models import User
 #from django.http import HttpResponseRedirect
 #from django.template.response import TemplateResponse
 from django.utils.translation import ugettext as _
-#from django.shortcuts import resolve_url
 from django.views.decorators.csrf import csrf_protect
 from django.template import RequestContext
 from django.contrib.auth import REDIRECT_FIELD_NAME, login as auth_login, logout, get_user_model
-
-#from django.contrib.auth.decorators import login_required
-#from django.contrib.auth.forms import AuthenticationForm, PasswordResetForm, SetPasswordForm, PasswordChangeForm
-#from django.contrib.auth.tokens import default_token_generator
-#from django.contrib.sites.models import get_current_site
-#from django.contrib.auth.models import User
+from match.models import Match 
 # Create your views here.
 
 def home(request):
+	matches = Match.objects.all()
 	if request.user.is_authenticated():
 		#return HttpResponse("Hello")
 		current_user= request.user
+		#matches = Match.objects.all()
 		#return HttpResponse(current_user)
-		return render(request,'users/welcome.html',{'current_user':current_user})
+		return render(request,'users/welcome.html',{'current_user':current_user,'matches':matches})
 	else:
-		return render(request,'index.html',{})
+		return render(request,'index.html',{'matches':matches})
 		#return HttpResponse("You are not logged in")
 
 def user_logout(request):

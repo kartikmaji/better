@@ -5,6 +5,10 @@
     </head>
     <body>
         <a href="/">Better</a>
+        <p>Upcoming matches</p>
+        {% for mch in matches %}
+             <p>{{mch}}</p><br>
+        {% endfor %}
         <p>Login is required to proceed. Please login through link given below</p>
         <a href="/login">Login</a>
     </body>
