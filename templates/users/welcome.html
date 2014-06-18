@@ -1,6 +1,6 @@
 <h1>Hello, {{ current_user }}</h1>
 <p>Upcoming Matches</p>
-{% for mch in matches %}
+{% for mch in upcoming_match_list %}
     <p>{{mch}}</p><br>
 {% endfor %}
 <a href="/logout">Logout</a>

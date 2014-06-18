@@ -15,15 +15,17 @@ from match.models import Match
 # Create your views here.
 
 def home(request):
-	matches = Match.objects.all()
+	upcoming_match_list = Match.objects.order_by('date_time')
+	#matches = Match.objects.all()
 	if request.user.is_authenticated():
 		#return HttpResponse("Hello")
+		
 		current_user= request.user
 		#matches = Match.objects.all()
 		#return HttpResponse(current_user)
-		return render(request,'users/welcome.html',{'current_user':current_user,'matches':matches})
+		return render(request,'users/welcome.html',{'current_user':current_user,'upcoming_match_list':upcoming_match_list})
 	else:
-		return render(request,'index.html',{'matches':matches})
+		return render(request,'index.html',{'upcoming_match_list':upcoming_match_list})
 		#return HttpResponse("You are not logged in")
 
 def user_logout(request):
