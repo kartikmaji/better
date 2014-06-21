@@ -1,0 +1,16 @@
+application: your-app-id
+version: 2
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /.*
+  script: main.application
+  login: required
+  auth_fail_action: redirect
+
+
+libraries:
+- name: django
+  version: "1.4"
