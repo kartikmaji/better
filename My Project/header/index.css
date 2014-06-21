@@ -1,0 +1,163 @@
+@charset "utf-8";
+/* For SIGN UPC */
+#form {
+	float: right;
+}
+
+/* Start designing of horizontal navigation bar */
+#navBar {
+	padding: 0px;
+	width: 760px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+#navBar ul li {
+	background-color: #666;
+	float: left;
+	border: 1px solid #CCC;
+	position: relative;
+	height: 30px;
+}
+#navBar ul li:hover {
+	background-color: #333333;
+}
+
+
+#navBar ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+#navBar ul li a {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 30px;
+	color: #FFF;
+	text-decoration: none;
+	text-align: center;
+	display: block;
+	height: 30px;
+	width: 150px;
+}
+#navBar ul ul {
+	position: absolute;
+	visibility: hidden;
+	top: 31px;
+}
+
+#navBar ul li ul li a:hover {
+	background-color: #0C0;
+}
+
+#navBar ul li a:hover {
+	color: #CF0;
+}
+
+#navBar ul li:hover ul {
+	visibility: visible;
+}
+/*End of horizontal navigation bar design */
+
+/*Start designing of vertical navigaton bar */
+
+#leftBar {
+	padding: 50px 0px 0px 0px;
+	width: 160px;
+	/*margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;*/
+}
+#leftBar ul li {
+	background-color: #666;
+	/*float: left;*/
+	border: 1px solid #CCC;
+	position: relative;
+	height: 30px;
+}
+#leftBar ul li:hover {
+	background-color: #333333;
+}
+
+
+#leftBar ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+#leftBar ul li a {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 30px;
+	color: #FFF;
+	text-decoration: none;
+	text-align: center;
+	display: block;
+	height: 30px;
+	width: 150px;
+}
+#leftBar ul ul {
+	position: absolute;
+	visibility: hidden;
+	top: 31px;
+}
+#leftBar ul li ul li a:hover {
+	background-color: #06F;
+}
+#leftBar ul li a:hover {
+	color: #CF0;
+}
+
+
+#leftBar ul li:hover ul {
+	visibility: visible;
+}
+/* End designing vertical navigation bar */
+
+/* Class for the flags inside vertical bar */
+
+.i {
+	height:30px;
+	width:40px;
+	float:right;
+	} /* End of class */
+
+/* Design for the social networking icon */	
+.youtube-icon, .facebook-icon, .google-icon, .twitter-icon
+{ display: inline-block; background: url("icons/download.png") no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; }
+ 
+.youtube-icon { background-position: -20px -0px; width: 48px; height: 48px; }
+
+.facebook-icon { background-position: -88px -0px; width: 48px; height: 48px; }
+
+.google-icon { background-position: -20px -68px; width: 48px; height: 48px; }
+
+.twitter-icon { background-position: -88px -68px; width: 48px; height: 48px; }
+/* End of design of social icons*/
+
+/* Started designing the footer*/
+#footer {
+	margin: 0px;
+	padding-top: 90px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	
+}
+
+#copyrights {
+	text-align: center;
+	vertical-align: bottom;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	color: black;
+	
+}
+#socialIcons {
+	float: right;
+}
+
+/* ENd designing the footer */
